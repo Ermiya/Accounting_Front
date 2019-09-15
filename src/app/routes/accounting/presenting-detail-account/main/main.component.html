@@ -1,0 +1,113 @@
+<h2>{{ 'app.accounting.presenting-detail-account.header.title' | translate }}</h2>
+
+<!-- table grid 1-->
+<nz-table nzBordered  nzSize="small" [nzPageSize]="10">
+  <thead>
+    <tr>
+      <th colspan="1">
+        {{ 'app.accounting.presenting-detail-account.grid.head.detaild-group-discribtion' | translate }}
+      </th>
+      <th colspan="1">
+        {{ 'app.accounting.presenting-detail-account.grid.head.detaild-group-code' | translate }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 1 -->
+    <tr>
+      <td align="center">1</td>
+      <td align="center">
+        {{ 'app.accounting.presenting-detail-account.grid.row.detaild-group-discribtion1' | translate }}
+      </td>
+    </tr>
+    <!-- 2 -->
+    <tr>
+      <td align="center">2</td>
+      <td align="center">
+        {{ 'app.accounting.presenting-detail-account.grid.row.detaild-group-discribtion2' | translate }}
+      </td>
+    </tr>
+    <!-- 3 -->
+    <tr>
+      <td align="center">3</td>
+      <td align="center">
+        {{ 'app.accounting.presenting-detail-account.grid.row.detaild-group-discribtion3' | translate }}
+      </td>
+    </tr>
+    <!-- 4 -->
+    <tr [routerLink]="['legal_and_natural_person']">
+      <td align="center">4</td>
+      <td align="center">
+        {{ 'app.accounting.presenting-detail-account.grid.row.detaild-group-discribtion4' | translate }}
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+<hr style="border: 1px solid BLACK" />
+<!-- table grid 2-->
+<nz-table nzBordered  nzSize="small" [nzPageSize]="10">
+  <thead>
+    <tr>
+      <th th colspan="1">
+        {{ 'app.accounting.presenting-detail-account.grid.head.detail-code' | translate }}
+      </th>
+      <th th colspan="1">
+        {{ 'app.accounting.presenting-detail-account.grid.head.detaild-discribtion' | translate }}
+      </th>
+      <th th colspan="1">
+        {{ 'app.accounting.presenting-detail-account.grid.head.personel-number' | translate }}
+      </th>
+      <th th colspan="1">
+        {{ 'app.accounting.presenting-detail-account.grid.head.update' | translate }}
+      </th>
+      <th th colspan="1" nzWidth="90px" nzRight="0px">
+        {{ 'app.accounting.presenting-detail-account.grid.head.delete' | translate }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 1 -->
+    <tr>
+      <td align="center">1</td>
+      <td align="center">علی حسنی</td>
+      <td align="center">935501</td>
+      <td align="center">
+        <a>{{ 'app.accounting.presenting-detail-account.grid.head.update' | translate }}</a>
+      </td>
+      <td align="center">
+        <a>{{ 'app.accounting.presenting-detail-account.grid.head.delete' | translate }}</a>
+      </td>
+    </tr>
+
+    <!-- 2 -->
+    <tr>
+      <td align="center">2</td>
+      <td align="center">رضا محسنی</td>
+      <td align="center">951145</td>
+      <td align="center">
+        <a>{{ 'app.accounting.presenting-detail-account.grid.head.update' | translate }}</a>
+      </td>
+      <td align="center">
+        <a>{{ 'app.accounting.presenting-detail-account.grid.head.delete' | translate }}</a>
+      </td>
+    </tr>
+    <!-- 3 -->
+    <tr>
+      <td align="center">13</td>
+      <td align="center">محمود احمدی</td>
+      <td align="center">901201</td>
+      <td align="center">
+        <a>{{ 'app.accounting.presenting-detail-account.grid.head.update' | translate }}</a>
+      </td>
+      <td align="center">
+        <a>{{ 'app.accounting.presenting-detail-account.grid.head.delete' | translate }}</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+<br />
+<div nz-col nzSpan="3" style="padding-top: 10px;">
+  <button nz-button nzType="primary" nzSize="small" (click)="submit()">افزودن</button>
+</div>
+<br />
+<br />

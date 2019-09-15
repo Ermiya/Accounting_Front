@@ -1,0 +1,279 @@
+<h2>{{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.header.title' | translate }}</h2>
+
+<form class="col-24" nz-form role="form" [formGroup]="test">
+  <!-- row 1 -->
+  <div nz-row [nzGutter]="4">
+    <!-- 1 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal">{{
+          'app.accounting.accounting-documents.input.temperory-document-numbe' | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzSm]="12"
+          [nzXs]="24"
+          [nzErrorTip]="'app.accounting.accounting-documents.input.temperory-document-numbe' | translate"
+        >
+          <nz-input-group nzSize="small">
+            <input
+              nz-input
+              formControlName="serialVal"
+              [placeholder]="'app.accounting.accounting-documents.input.temperory-document-numbe' | translate"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!-- 2 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="serialVal">{{
+          'app.accounting.accounting-documents.date-peeker.top' | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzSm]="18"
+          [nzXs]="24"
+          [nzErrorTip]="'app.accounting.accounting-documents.date-peeker.top' | translate"
+        >
+          <nz-input-group nzSize="small">
+            <nz-date-picker formControlName="serialVal" [nzFormat]="dateFormat"></nz-date-picker>
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+
+    <!--3 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="7" [nzXs]="24" nzRequired nzFor="serialVal">{{
+          'app.accounting.accounting-documents.input.document-type' | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzSm]="17"
+          [nzXs]="24"
+          [nzErrorTip]="'app.accounting.accounting-documents.input.document-type' | translate"
+        >
+          <nz-input-group nzSize="small">
+            <input
+              nz-input
+              formControlName="serialVal"
+              [placeholder]="'app.accounting.accounting-documents.input.document-type' | translate"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+
+    <!-- 4 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal">{{
+          'app.accounting.accounting-documents.input.determinestic-document-number' | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzSm]="12"
+          [nzXs]="24"
+          [nzErrorTip]="'app.accounting.accounting-documents.input.determinestic-document-number' | translate"
+        >
+          <nz-input-group nzSize="small">
+            <input
+              nz-input
+              formControlName="serialVal"
+              [placeholder]="'app.accounting.accounting-documents.input.determinestic-document-number' | translate"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <!-- row 2 -->
+  <div nz-row [nzGutter]="4">
+    <!-- 1 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="11" [nzXs]="24" nzRequired nzFor="serialVal">
+          {{ 'app.accounting.accounting-documents.optionbox.document-state' | translate }}
+        </nz-form-label>
+        <nz-form-control
+          [nzSm]="13"
+          [nzXs]="24"
+          [nzErrorTip]="'app.accounting.accounting-documents.optionbox.document-state' | translate"
+        >
+          <nz-input-group nzSize="small" nzCompact>
+            <nz-select style="width: 130px;" [(ngModel)]="singleValue" [nzSize]="size" nzShowSearch>
+              <nz-option
+                [nzLabel]="'app.accounting.accounting-documents.suboption.document-state-payable' | translate"
+                [nzValue]="'app.accounting.accounting-documents.suboption.document-state-payable' | translate"
+              ></nz-option>
+              <nz-option
+                [nzLabel]="'app.accounting.accounting-documents.suboption.document-state.not-payable' | translate"
+                [nzValue]="'app.accounting.accounting-documents.suboption.document-state.not-payable' | translate"
+              ></nz-option>
+            </nz-select>
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+
+    <!-- 2 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="9" [nzXs]="24" nzRequired nzFor="serialVal">{{
+          'app.accounting.accounting-documents.input.document-description' | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzSm]="15"
+          [nzXs]="24"
+          [nzErrorTip]="'app.accounting.accounting-documents.input.document-description' | translate"
+        >
+          <nz-input-group nzSize="small">
+            <input
+              nz-input
+              formControlName="serialVal"
+              [placeholder]="'app.accounting.accounting-documents.input.document-description' | translate"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+</form>
+<br />
+<!-- table grid [nzData]="dataSet"-->
+<nz-table nzBordered nzSize="small" [nzPageSize]="10">
+  <thead>
+    <tr>
+      <th colspan="1">ردیف</th>
+      <th colspan="1">معین</th>
+      <th colspan="1">تفصیل</th>
+      <th colspan="1">طرف تفصیل</th>
+      <th colspan="1">شرح آرتیکل</th>
+      <th colspan="1">بدهکار</th>
+      <th colspan="1">بستانکار</th>
+      <th colspan="1">علت صدور</th>
+      <th colspan="1">قابل پرداخت</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 1 -->
+    <tr>
+      <td style="text-align:center">1</td>
+      <td style="text-align:center">1311</td>
+      <td style="text-align:center">121</td>
+      <td style="text-align:center">120</td>
+      <td style="text-align:center">طلب از سازنده</td>
+      <td style="text-align:center">153000000</td>
+      <td style="text-align:center">0</td>
+      <td style="text-align:center">1</td>
+
+      <td style="text-align:center">
+        <label nz-checkbox></label>
+      </td>
+    </tr>
+    <!-- 2 -->
+    <tr>
+      <td style="text-align:center">2</td>
+      <td style="text-align:center">1201</td>
+      <td style="text-align:center">120</td>
+      <td style="text-align:center">5312</td>
+      <td style="text-align:center">طلب از سازنده</td>
+      <td style="text-align:center">0</td>
+      <td style="text-align:center">153000000</td>
+
+      <td style="text-align:center">12</td>
+
+      <td style="text-align:center">
+        <label nz-checkbox></label>
+      </td>
+    </tr>
+    <!-- 3 -->
+    <tr>
+      <td style="text-align:center"><b>جمع</b></td>
+      <td style="text-align:center"></td>
+      <td style="text-align:center"></td>
+      <td style="text-align:center"></td>
+      <td style="text-align:center"></td>
+      <td style="text-align:center">
+        <font color="green">153000000</font>
+      </td>
+      <td style="text-align:center">
+        <font color="red">153000000</font>
+      </td>
+
+      <td style="text-align:center"></td>
+      <td style="text-align:center"></td>
+    </tr>
+  </tbody>
+</nz-table>
+
+<form class="col-24" nz-form [formGroup]="test2" role="form">
+  <!-- row 1 -->
+  <div nz-row [nzGutter]="4">
+    <!-- 1 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="9" [nzXs]="24" nzRequired nzFor="serialVal">{{
+          'app.accounting.accounting-documents.input.document-helper-description' | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzSm]="15"
+          [nzXs]="24"
+          [nzErrorTip]="'app.accounting.accounting-documents.input.document-helper-description' | translate"
+        >
+          <nz-input-group nzSize="small">
+            <input
+              nz-input
+              formControlName="serialVal"
+              [placeholder]="'app.accounting.accounting-documents.input.document-helper-description' | translate"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!-- 2 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="9" [nzXs]="24" nzRequired nzFor="serialVal">{{
+          'app.accounting.accounting-documents.input.document-detail-description' | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzSm]="15"
+          [nzXs]="24"
+          [nzErrorTip]="'app.accounting.accounting-documents.input.document-detail-description' | translate"
+        >
+          <nz-input-group nzSize="small">
+            <input
+              nz-input
+              formControlName="serialVal"
+              [placeholder]="'app.accounting.accounting-documents.input.document-detail-description' | translate"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!-- 3-->
+    <div nz-col nzSpan="9">
+      <nz-form-item>
+        <nz-form-label nzSpan="9" nzRequired nzFor="serialVal">{{
+          'app.accounting.accounting-documents.input.document-side-description' | translate
+        }}</nz-form-label>
+        <nz-form-control
+          nzSpan="15"
+          [nzErrorTip]="'app.accounting.accounting-documents.input.document-side-description' | translate"
+        >
+          <nz-input-group nzSize="small">
+            <input
+              nz-input
+              formControlName="serialVal"
+              [placeholder]="'app.accounting.accounting-documents.input.document-side-description' | translate"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!-- 4 -->
+    <div nz-col nzSpan="3" style="padding-top: 10px;">
+      <button nz-button nzType="primary" nzSize="small" (click)="submit()">کپی از سند</button>
+    </div>
+  </div>
+</form>

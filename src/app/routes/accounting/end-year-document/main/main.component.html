@@ -1,0 +1,89 @@
+<h2>{{ 'app.accounting.end-year-document.header.title' | translate }}</h2>
+
+<!-- table grid 3-->
+<nz-table nzBordered  nzSize="small" [nzPageSize]="10">
+  <thead>
+    <tr>
+      <th colspan="1">{{ 'app.accounting.end-year-document.grid.head.document-title' | translate }}</th>
+      <th colspan="1">{{ 'app.accounting.end-year-document.grid.head.year' | translate }}</th>
+      <th colspan="1">{{ 'app.accounting.end-year-document.grid.head.document-number' | translate }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 1 -->
+    <tr>
+      <td style="text-align:center">
+        <label nz-checkbox>سند بستن حساب های موقت</label>
+      </td>
+      <td style="text-align:center">
+        <input
+          nz-input
+          formControlName="serialVal"
+          value="1398"
+          [placeholder]="'app.accounting.end-year-document.grid.head.year' | translate"
+        />
+      </td>
+      <td style="text-align:center">
+        <input
+          nz-input
+          formControlName="serialVal"
+          value="1001"
+          [placeholder]="'app.accounting.end-year-document.grid.head.document-number' | translate"
+        />
+      </td>
+    </tr>
+    <!-- 2 -->
+    <tr>
+      <td style="text-align:center">
+        <label nz-checkbox>سند اختتامیه</label>
+      </td>
+      <td style="text-align:center">
+        <input
+          nz-input
+          formControlName="serialVal"
+          value="1398"
+          [placeholder]="'app.accounting.end-year-document.grid.head.year' | translate"
+        />
+      </td>
+      <td style="text-align:center">
+        <input
+          nz-input
+          formControlName="serialVal"
+          value="1002"
+          [placeholder]="'app.accounting.end-year-document.grid.head.document-number' | translate"
+        />
+      </td>
+    </tr>
+    <!-- 3 -->
+    <tr>
+      <td style="text-align:center">
+        <label nz-checkbox>سند افتتاحیه</label>
+      </td>
+      <td style="text-align:center">
+        <input
+          nz-input
+          formControlName="serialVal"
+          value="1399"
+          [placeholder]="'app.accounting.end-year-document.grid.head.year' | translate"
+        />
+      </td>
+      <td style="text-align:center">
+        <input
+          nz-input
+          formControlName="serialVal"
+          value="748"
+          [placeholder]="'app.accounting.end-year-document.grid.head.document-number' | translate"
+        />
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+<br />
+<div nz-col nzSpan="3" style="padding: 10px;">
+  <button nz-button nzType="primary" nzSize="small" [routerLink]="['account_analyze']">
+    {{ 'app.accounting.end-year-document.button.submit' | translate }}
+  </button>
+</div>
+<br />
+
+<nz-progress [nzPercent]="50" nzStatus="active"></nz-progress>

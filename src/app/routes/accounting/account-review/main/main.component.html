@@ -1,0 +1,239 @@
+<h2>{{ 'app.accounting.account-review.header.title' | translate }}</h2>
+
+<form class="col-24" nz-form role="form" [formGroup]="test">
+  <!-- row 1 -->
+  <div nz-row [nzGutter]="4">
+    <!-- 1 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="serialVal">{{
+          'app.accounting.account-review.date-peaker.from' | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzSm]="18"
+          [nzXs]="24"
+          [nzErrorTip]="'app.accounting.account-review.date-peaker.from' | translate"
+        >
+          <nz-input-group nzSize="small">
+            <nz-date-picker formControlName="serialVal" [nzFormat]="dateFormat"></nz-date-picker>
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!-- 2 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="serialVal">{{
+          'app.accounting.account-review.date-peaker.to' | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzSm]="18"
+          [nzXs]="24"
+          [nzErrorTip]="'app.accounting.account-review.date-peaker.to' | translate"
+        >
+          <nz-input-group nzSize="small">
+            <nz-date-picker formControlName="serialVal" [nzFormat]="dateFormat"></nz-date-picker>
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+
+    <!--3 -->
+    <div nz-col nzSpan="3">
+      <nz-form-item>
+        <nz-form-item>
+          <label nz-checkbox style="padding-top: 11px;">{{
+            'app.accounting.account-review.checkbox.opening-documents' | translate
+          }}</label>
+        </nz-form-item>
+      </nz-form-item>
+    </div>
+    <!-- 4 -->
+    <div nz-col nzSpan="3">
+      <nz-form-item>
+        <label nz-checkbox style="padding-top: 11px;">{{
+          'app.accounting.account-review.checkbox.finishing-documents' | translate
+        }}</label>
+      </nz-form-item>
+    </div>
+
+    <!-- 4 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="5" [nzXs]="24" nzRequired nzFor="serialVal">
+          {{ 'app.accounting.account-review.optionbox.review' | translate }}</nz-form-label
+        >
+        <nz-form-control
+          [nzSm]="19"
+          [nzXs]="24"
+          [nzErrorTip]="'app.accounting.account-review.optionbox.review' | translate"
+        >
+          <nz-input-group nzSize="small" nzCompact>
+            <nz-select style="width: 200px;" [nzSize]="size" nzShowSearch [(ngModel)]="selected">
+              <nz-option [nzLabel]="'app.accounting.account-review.option1.review' | translate" nzValue="1"></nz-option>
+              <nz-option [nzLabel]="'app.accounting.account-review.option2.review' | translate" nzValue="2"></nz-option>
+              <nz-option [nzLabel]="'app.accounting.account-review.option3.review' | translate" nzValue="3"></nz-option>
+              <nz-option [nzLabel]="'app.accounting.account-review.option4.review' | translate" nzValue="4"></nz-option>
+              <nz-option [nzLabel]="'app.accounting.account-review.option5.review' | translate" nzValue="5"></nz-option>
+              <nz-option [nzLabel]="'app.accounting.account-review.option6.review' | translate" nzValue="6"></nz-option>
+            </nz-select>
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <!-- row 2-->
+  <div nz-row [nzGutter]="4" class="height-1">
+    <!-- 1 -->
+    <div nz-col nzSpan="3">
+      <nz-form-item>
+        <nz-form-label [nzSm]="24" [nzXs]="24" nzRequired nzFor="serialVal"
+          >{{ 'app.accounting.account-review.lable.secendery-filters' | translate }}
+        </nz-form-label>
+      </nz-form-item>
+    </div>
+    <div nz-col nzSpan="21">
+      <nz-form-item>
+        <label nz-checkbox style="padding-top: 11px;"
+          >{{ 'app.accounting.account-review.checkbox.secendery-filters-1' | translate }}
+        </label>
+        <label nz-checkbox style="padding-top: 11px;">{{
+          'app.accounting.account-review.checkbox.secendery-filters-2' | translate
+        }}</label>
+        <label nz-checkbox style="padding-top: 11px;">{{
+          'app.accounting.account-review.checkbox.secendery-filters-3' | translate
+        }}</label>
+        <label nz-checkbox style="padding-top: 11px;">{{
+          'app.accounting.account-review.checkbox.secendery-filters-4' | translate
+        }}</label>
+        <label nz-checkbox style="padding-top: 11px;" (click)="changeState()">{{
+          'app.accounting.account-review.checkbox.secendery-filters-5' | translate
+        }}</label>
+        <label nz-checkbox style="padding-top: 11px;">{{
+          'app.accounting.account-review.checkbox.secendery-filters-6' | translate
+        }}</label>
+      </nz-form-item>
+    </div>
+  </div>
+</form>
+<br />
+
+<!-- table grid 1-->
+<nz-table nzBordered *ngIf="isMainGridFunc()" nzSize="small" [nzPageSize]="10">
+  <thead>
+    <tr>
+      <th colspan="1">کد معین</th>
+      <th colspan="1">شرح معین</th>
+      <th colspan="1">بدهکار</th>
+      <th colspan="1">بستانکار</th>
+      <th colspan="1">مانده بدهکار</th>
+      <th colspan="1">مانده بستانکاری</th>
+      <th colspan="1">
+        انتخاب
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 1 -->
+    <tr>
+      <td align="center">1111</td>
+      <td align="center">صندوق ریالی</td>
+      <td align="center">16,787,900,100</td>
+      <td align="center">56,789,000</td>
+      <td align="center">16,731,111,100</td>
+      <td align="center">0</td>
+      <td align="center">
+        <label nz-checkbox style="padding-top: 11px;"></label>
+      </td>
+    </tr>
+    <!-- 2 -->
+    <tr>
+      <td align="center">1112</td>
+      <td align="center">بستانکاران تجاری</td>
+      <td align="center">678,000,345,454</td>
+      <td align="center">7,456,540,987,895</td>
+      <td align="center">0</td>
+      <td align="center">6,778,540,642,441</td>
+      <td align="center">
+        <label nz-checkbox style="padding-top: 11px;"></label>
+      </td>
+    </tr>
+    <!-- 3 -->
+    <tr>
+      <td align="center"><b>جمع</b></td>
+      <td align="center"></td>
+      <td align="center"><font color="green">694,788,245,554</font></td>
+      <td align="center"><font color="red">7,456,597,776,895</font></td>
+      <td align="center"><font color="green">16,731,111,100</font></td>
+      <td align="center"><font color="red">6,778,540,642,441</font></td>
+      <td align="center"></td>
+    </tr>
+  </tbody>
+</nz-table>
+
+<!-- table grid 2-->
+<nz-table nzBordered nzSize="small" [nzPageSize]="10" *ngIf="!isMainGridFunc()">
+  <thead>
+    <tr>
+      <th colspan="1">کد تفصیلی</th>
+      <th colspan="1">شرح تفصیلی</th>
+      <th colspan="1">بدهکار</th>
+      <th colspan="1">بستانکار</th>
+      <th colspan="1">مانده بدهکاری</th>
+      <th colspan="1">مانده بستانکاری</th>
+      <th colspan="1">
+        انتخاب
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 1 -->
+    <tr>
+      <td align="center">345</td>
+      <td align="center">اندیشه آمل</td>
+      <td align="center">8,000,000,054</td>
+      <td align="center">56,540,987,000</td>
+      <td align="center">0</td>
+      <td align="center">48,540,986,946</td>
+
+      <td align="center">
+        <label nz-checkbox style="padding-top: 11px;"></label>
+      </td>
+    </tr>
+    <!-- 2 -->
+    <tr>
+      <td align="center">8001</td>
+      <td align="center">بهاران صنعت</td>
+      <td align="center">670,000,345,400</td>
+      <td align="center">7,400,000,000,895</td>
+      <td align="center">0</td>
+      <td align="center">6,729,999,655,495</td>
+      <td align="center">
+        <label nz-checkbox style="padding-top: 11px;"></label>
+      </td>
+    </tr>
+    <!-- 3 -->
+    <tr>
+      <td align="center"><b>جمع</b></td>
+      <td align="center"></td>
+      <td align="center"><font color="green">678,000,345,454</font></td>
+      <td align="center"><font color="red">7,456,540,987,895</font></td>
+      <td align="center"><font color="green">0</font></td>
+      <td align="center"><font color="red">6,778,540,642,441</font></td>
+
+      <td align="center"></td>
+    </tr>
+  </tbody>
+</nz-table>
+<!-- 1 -->
+<!-- <div nz-col nzSpan="3" style="padding: 10px;">
+  <button nz-button nzType="primary" nzSize="small" [routerLink]="['account_analyze']">
+    {{ 'app.accounting.account-review.account-analyze.header.title' | translate }}
+  </button>
+</div> -->
+<!-- 2 -->
+<div nz-col nzSpan="3" style="padding: 10px;">
+  <button nz-button nzType="primary" nzSize="small" [routerLink]="['document-detail']">
+    {{ 'app.accounting.account-review.document-detail.header.title' | translate }}
+  </button>
+</div>

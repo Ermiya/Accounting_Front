@@ -1,0 +1,34 @@
+<h2>{{ 'app.accounting.finance-year-select.header.title' | translate }}</h2>
+
+<form class="col-24" nz-form role="form" [formGroup]="test">
+  <!-- row 1 -->
+  <div nz-row [nzGutter]="1">
+    <!-- 1 -->
+    <div nz-col nzSpan="8">
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="serialVal">{{
+          'app.accounting.finance-year-select.radio.lable' | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzSm]="16"
+          [nzXs]="24"
+          [nzErrorTip]="'app.accounting.finance-year-select.radio.lable' | translate"
+        >
+          <nz-radio-group [(ngModel)]="radioValue">
+            <label nz-radio nzValue="1397">1397</label>
+            <label nz-radio nzValue="1398">1398</label>
+          </nz-radio-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <!-- row 2 -->
+  <div nz-col nzSpan="3" style="padding: 10px;">
+    <button nz-button nzType="primary" nzSize="small" [routerLink]="['account_analyze']">
+      {{ 'app.accounting.finance-year-select.button.submit' | translate }}
+    </button>
+  </div>
+</form>
+<br />
+<nz-progress [nzPercent]="50" nzStatus="active"></nz-progress>

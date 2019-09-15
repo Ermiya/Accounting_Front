@@ -1,0 +1,294 @@
+<h2>{{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.header.title' | translate }}</h2>
+
+<form class="col-24" nz-form role="form" [formGroup]="test">
+  <!-- row 1 -->
+  <div nz-row [nzGutter]="4">
+    <!-- 1 --> 
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal">
+          {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.code' | translate }}
+        </nz-form-label>
+        <nz-form-control
+          [nzSm]="12"
+          [nzXs]="24"
+          [nzErrorTip]="
+            'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.code' | translate
+          "
+        >
+          <nz-input-group nzSize="small">
+            <input
+              nz-input
+              formControlName="serialVal"
+              [placeholder]="
+                'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.code' | translate
+              "
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!-- 2 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="serialVal">
+          {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.save-time' | translate }}
+        </nz-form-label>
+        <nz-form-control
+          [nzSm]="18"
+          [nzXs]="24"
+          [nzErrorTip]="
+            'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.save-time' | translate
+          "
+        >
+          <nz-input-group nzSize="small">
+            <nz-date-picker formControlName="serialVal"  nzShowTime
+      nzFormat="yyyy-MM-dd HH:mm:ss" ></nz-date-picker>
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+
+    <!--3 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="11" [nzXs]="24" nzRequired nzFor="serialVal">{{
+          'app.accounting.presenting-detail-account.adding-legal-and-natural-person.optionbox.status' | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzSm]="13"
+          [nzXs]="24"
+          [nzErrorTip]="
+            'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.status' | translate
+          "
+        >
+          <nz-input-group nzSize="small" nzCompact>
+            <nz-select style="width: 130px;" [(ngModel)]="singleValue" [nzSize]="size" nzShowSearch>
+              <nz-option [nzLabel]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.suboption.status.active'| translate" [nzValue]="1"></nz-option>
+              <nz-option [nzLabel]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.suboption.status.inactive'| translate" [nzValue]="0"></nz-option>
+            </nz-select>
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <!-- row 2 -->
+  <div nz-row [nzGutter]="4">
+    <!-- 1 -->
+    <div nz-col nzSpan="3">
+      <nz-form-item>
+        <nz-form-label [nzSm]="24" [nzXs]="24" nzRequired nzFor="serialVal">
+          {{
+            'app.accounting.presenting-detail-account.adding-legal-and-natural-person.lable.working-field-filter'
+              | translate
+          }}
+        </nz-form-label>
+      </nz-form-item>
+    </div>
+    <div nz-col nzSpan="21">
+      <nz-form-item>
+        <label nz-checkbox style="padding-top: 11px;"
+          >{{
+            'app.accounting.presenting-detail-account.adding-legal-and-natural-person.checkbox.working-field-filter1'
+              | translate
+          }}
+        </label>
+        <label nz-checkbox style="padding-top: 11px;"
+          >{{
+            'app.accounting.presenting-detail-account.adding-legal-and-natural-person.checkbox.working-field-filter2'
+              | translate
+          }}
+        </label>
+        <label nz-checkbox style="padding-top: 11px;"
+          >{{
+            'app.accounting.presenting-detail-account.adding-legal-and-natural-person.checkbox.working-field-filter3'
+              | translate
+          }}
+        </label>
+      </nz-form-item>
+    </div>
+  </div>
+  <!-- row 3 -->
+
+  <div nz-row [nzGutter]="4">
+    <!-- 1 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal"> {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.name' | translate }}</nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.name' | translate">
+          <nz-input-group nzSize="small">
+            <input nz-input formControlName="serialVal" [placeholder]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.name' | translate" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!-- 2 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal"> {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.latin-name' | translate }}</nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.latin-name' | translate">
+          <nz-input-group nzSize="small">
+            <input nz-input formControlName="serialVal" [placeholder]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.latin-name' | translate" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+
+    <!--3 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal"> {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.ceo' | translate }}</nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.ceo' | translate">
+          <nz-input-group nzSize="small">
+            <input nz-input formControlName="serialVal" [placeholder]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.ceo' | translate" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <!-- row 4 -->
+
+  <div nz-row [nzGutter]="4">
+    <!-- 1 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal"> {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.phone-number' | translate }}</nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.phone-number' | translate">
+          <nz-input-group nzSize="small">
+            <input nz-input formControlName="serialVal" [placeholder]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.phone-number' | translate" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!-- 2 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal"> {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.fax' | translate }}</nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.fax' | translate">
+          <nz-input-group nzSize="small">
+            <input nz-input formControlName="serialVal" [placeholder]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.fax' | translate" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+
+    <!--3 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal"> {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.e-mail' | translate }}</nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.e-mail' | translate">
+          <nz-input-group nzSize="small">
+            <input nz-input formControlName="serialVal" [placeholder]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.e-mail' | translate" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <!-- row 5 -->
+
+  <div nz-row [nzGutter]="4">
+    <!-- 1 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal"> {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.address' | translate }}</nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.address' | translate">
+          <nz-input-group nzSize="small">
+            <input nz-input formControlName="serialVal" [placeholder]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.address' | translate" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!-- 2 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal"> {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.postal-code' | translate }}</nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.postal-code' | translate">
+          <nz-input-group nzSize="small">
+            <input nz-input formControlName="serialVal" [placeholder]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.postal-code' | translate" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <!-- row 6 -->
+  <div nz-row [nzGutter]="4">
+    <!-- 1 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal"> {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.register-number' | translate }}</nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.register-number' | translate">
+          <nz-input-group nzSize="small">
+            <input nz-input formControlName="serialVal" [placeholder]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.register-number' | translate" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!-- 2 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal"> {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.econmical-code' | translate }}</nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.econmical-code' | translate">
+          <nz-input-group nzSize="small">
+            <input nz-input formControlName="serialVal" [placeholder]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.econmical-code' | translate" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <!-- row 7 -->
+  <div nz-row [nzGutter]="4">
+    <!-- 1 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal"> {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.national-number' | translate }}</nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.national-number' | translate">
+          <nz-input-group nzSize="small">
+            <input nz-input formControlName="serialVal" [placeholder]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.national-number' | translate" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!-- 2 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal"> {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.national-identifier' | translate }}</nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.national-identifier' | translate">
+          <nz-input-group nzSize="small">
+            <input nz-input formControlName="serialVal" [placeholder]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.national-identifier' | translate" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <!-- row 8 -->
+  <div nz-row [nzGutter]="4">
+    <!-- 1 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal"> {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.country' | translate }}</nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.country' | translate">
+          <nz-input-group nzSize="small">
+            <input nz-input formControlName="serialVal" [placeholder]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.country' | translate" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!-- 2 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="12" [nzXs]="24" nzRequired nzFor="serialVal"> {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.city' | translate }}</nz-form-label>
+        <nz-form-control [nzSm]="12" [nzXs]="24" [nzErrorTip]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.city' | translate">
+          <nz-input-group nzSize="small">
+            <input nz-input formControlName="serialVal" [placeholder]="'app.accounting.presenting-detail-account.adding-legal-and-natural-person.input.city' | translate" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <!-- | -->
+  <div nz-col nzSpan="3" style="padding-top: 10px;">
+    <button nz-button nzType="primary" nzSize="small" (click)="submit()">  {{ 'app.accounting.presenting-detail-account.adding-legal-and-natural-person.button.submit' | translate }} </button>
+  </div>
+</form>
+<br />

@@ -1,0 +1,48 @@
+<h2>{{ 'app.accounting.accounting-document-finalize.header.title' | translate }}</h2>
+<form class="col-24" nz-form role="form" [formGroup]="test">
+  <!-- row 1 -->
+  <div nz-row [nzGutter]="4">
+    <!-- 1 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="serialVal">{{
+          'app.accounting.accounting-document-finalize.date-peaker.from' | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzSm]="18"
+          [nzXs]="24"
+          [nzErrorTip]="'app.accounting.accounting-document-finalize.date-peaker.from' | translate"
+        >
+          <nz-input-group nzSize="small">
+            <nz-date-picker formControlName="serialVal" [nzFormat]="dateFormat"></nz-date-picker>
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <!-- 2 -->
+    <div nz-col nzSpan="6">
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="serialVal">{{
+          'app.accounting.accounting-document-finalize.date-peaker.to' | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzSm]="18"
+          [nzXs]="24"
+          [nzErrorTip]="'app.accounting.accounting-document-finalize.date-peaker.to' | translate"
+        >
+          <nz-input-group nzSize="small">
+            <nz-date-picker formControlName="serialVal" [nzFormat]="dateFormat"></nz-date-picker>
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+
+    <div nz-col nzSpan="3" style="padding: 10px;">
+      <button nz-button nzType="primary" nzSize="small" [routerLink]="['account_analyze']">
+        {{ 'app.accounting.accounting-document-finalize.button.submit' | translate }}
+      </button>
+    </div>
+  </div>
+</form>
+<br />
+<nz-progress [nzPercent]="50" nzStatus="active"></nz-progress>

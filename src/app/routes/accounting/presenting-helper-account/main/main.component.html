@@ -1,0 +1,198 @@
+<h2>معرفی حساب معین</h2>
+
+<!-- table grid 1-->
+<nz-table nzBordered  nzSize="small" [nzPageSize]="10">
+  <thead>
+    <tr>
+      <th colspan="1">کد گروه حساب</th>
+      <th colspan="1">شرح گروه حساب</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 1 -->
+    <tr>
+      <td align="center">1</td>
+      <td align="center">دارايي هاي جاري</td>
+    </tr>
+    <!-- 2 -->
+    <tr>
+      <td align="center">2</td>
+      <td align="center">داراييهاي غيرجاري</td>
+    </tr>
+    <!-- 3 -->
+    <tr>
+      <td align="center">3</td>
+      <td align="center">بدهي هاي جاري</td>
+    </tr>
+    <!-- 4 -->
+    <tr>
+      <td align="center">4</td>
+      <td align="center">بدهي هاي غيرجاري</td>
+    </tr>
+    <!-- 5 -->
+    <tr>
+      <td align="center">5</td>
+      <td align="center">حقوق صاحبان سهام</td>
+    </tr>
+    <!-- 6 -->
+    <tr>
+      <td align="center">6</td>
+      <td align="center">حسابهاي سودوزياني</td>
+    </tr>
+    <!-- 7 -->
+    <tr>
+      <td align="center">7</td>
+      <td align="center">هزينه ها</td>
+    </tr>
+    <!-- 8 -->
+    <tr>
+      <td align="center">8</td>
+      <td align="center">بهاي تمام شده كالاي فروش رفته</td>
+    </tr>
+    <!-- 9 -->
+    <tr>
+      <td align="center">9</td>
+      <td align="center">حسابهاي كنترلي و ساير</td>
+    </tr>
+  </tbody>
+</nz-table>
+<hr style="border: 1px solid BLACK" />
+<!-- table grid 2-->
+<nz-table nzBordered  nzSize="small" [nzPageSize]="10">
+  <thead>
+    <tr>
+      <th colspan="1">کد حساب کل</th>
+      <th colspan="1">شرح حساب کل</th>
+      <th colspan="1">ماهیت حساب</th>
+      <th colspan="1">به روزرسانی</th>
+      <th nzWidth="90px" align="center">حذف</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 1 -->
+    <tr>
+      <td align="center">11</td>
+      <td align="center">موجودي نقد وبانك</td>
+      <td align="center">بدهکار</td>
+      <td align="center">
+        <a>به روزرسانی</a>
+      </td>
+      <td align="center">
+        <a>حذف</a>
+      </td>
+    </tr>
+    <!-- 2 -->
+    <tr>
+      <td align="center">12</td>
+      <td align="center">سرمايه گذاري هاي كوتاه مدت</td>
+      <td align="center">بدهکار</td>
+      <td align="center">
+        <a>به روزرسانی</a>
+      </td>
+      <td align="center">
+        <a>حذف</a>
+      </td>
+    </tr>
+    <!-- 3 -->
+    <tr>
+      <td align="center">13</td>
+      <td align="center">حسابها واسناد دريافتني</td>
+      <td align="center">بدهکار</td>
+      <td align="center">
+        <a>به روزرسانی</a>
+      </td>
+      <td align="center">
+        <a>حذف</a>
+      </td>
+    </tr>
+    <!-- 4 -->
+    <tr>
+      <td align="center">14</td>
+      <td align="center">حسابها واسناددريافتني غيرتجاري</td>
+      <td align="center">بدهکار</td>
+      <td align="center">
+        <a>به روزرسانی</a>
+      </td>
+      <td align="center">
+        <a>حذف</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+<br />
+<div nz-col nzSpan="3" style="padding-top: 10px;">
+  <button nz-button nzType="primary" nzSize="small" (click)="submit()">افزودن</button>
+</div>
+<br />
+<br />
+<br />
+<hr style="border: 1px solid BLACK" />
+<br />
+<!-- table grid 3-->
+<nz-table nzBordered  nzSize="small" [nzPageSize]="10">
+  <thead>
+    <tr>
+      <th colspan="1">کد حساب معین</th>
+      <th colspan="1">شرح حساب معین</th>
+      <th colspan="1">تاریخ شروع</th>
+      <th colspan="1">به روزرسانی</th>
+      <th nzWidth="90px" colspan="1">حذف</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 1 -->
+    <tr>
+      <td align="center">1111</td>
+      <td align="center">صندوق ريالي</td>
+      <td align="center">۱۳۹۸/۰۴/۲۳</td>
+      <td align="center">
+        <a>به روزرسانی</a>
+      </td>
+      <td align="center">
+        <a>حذف</a>
+      </td>
+    </tr>
+    <!-- 2 -->
+    <tr>
+      <td align="center">1112</td>
+      <td align="center">صندوق ارزي - دلار</td>
+      <td align="center">۱۳۹۸/۰۴/۲۳</td>
+      <td align="center">
+        <a>به روزرسانی</a>
+      </td>
+      <td align="center">
+        <a>حذف</a>
+      </td>
+    </tr>
+    <!-- 3 -->
+    <tr>
+      <td align="center">1113</td>
+      <td align="center">صندوق ارزي - مارك</td>
+      <td align="center">۱۳۹۸/۰۴/۲۳</td>
+      <td align="center">
+        <a>به روزرسانی</a>
+      </td>
+      <td align="center">
+        <a>حذف</a>
+      </td>
+    </tr>
+    <!-- 4 -->
+    <tr>
+      <td align="center">1114</td>
+      <td align="center">صندوق ارزي - پوند</td>
+      <td align="center">۱۳۹۸/۰۴/۲۳</td>
+      <td align="center">
+        <a>به روزرسانی</a>
+      </td>
+      <td align="center">
+        <a>حذف</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+<br />
+<div nz-col nzSpan="3" style="padding-top: 10px;">
+  <button nz-button nzType="primary" nzSize="small" (click)="submit()">افزودن</button>
+</div>
+<br />
+<br />

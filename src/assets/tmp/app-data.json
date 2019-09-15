@@ -1,0 +1,107 @@
+{
+  "app": {
+    "name": "Alain",
+    "description": "Ng-zorro admin panel front-end framework"
+  },
+  "user": {
+    "name": "Admin",
+    "avatar": "./assets/tmp/img/avatar.jpg",
+    "email": "cipchk@qq.com"
+  },
+  "menu": [
+    {
+      "text": "",
+      "group": false,
+      "i18n": "",
+      "hideInBreadcrumb": true,
+      "children": [
+        {
+          "text": "registration",
+          "i18n": "menu.registration",
+          "icon": "anticon-dashboard",
+          "children": [
+            {
+              "text": "applicants-registration",
+              "link": "/applicants-register",
+              "i18n": "menu.applicants-registration"
+            }
+          ]
+        },
+        {
+          "text": "accounting",
+          "i18n": "menu.list.accounting",
+          "icon": "anticon-dashboard",
+          "children": [
+            {
+              "text": "main-actions",
+              "i18n": "menu.list.accounting.main-actions",
+              "children": [
+                {
+                  "text": "accounting-documents",
+                  "link": "/accounting/accounting_document",
+                  "i18n": "menu.list.accounting.accounting-documents"
+                },
+                {
+                  "text": "accounting-document-control",
+                  "link": "/accounting/accounting_document_control",
+                  "i18n": "menu.list.accounting.accounting-document-control"
+                },
+                {
+                  "text": "accounting-document-finalize",
+                  "link": "/accounting/accounting_document_finalize",
+                  "i18n": "menu.list.accounting.accounting-document-finalize"
+                },
+                {
+                  "text": "end-year-document",
+                  "link": "/accounting/end_year_document",
+                  "i18n": "menu.list.accounting.end-year-document"
+                }
+              ]
+            },
+            {
+              "text": "base-information",
+              "i18n": "menu.list.accounting.base-information",
+              "children": [
+                {
+                  "text": "document-type",
+                  "link": "/accounting/document_type",
+                  "i18n": "menu.list.accounting.document-type"
+                },
+                {
+                  "text": "presenting-helper-account",
+                  "link": "/accounting/presenting_helper_account",
+                  "i18n": "menu.list.accounting.presenting-helper-account"
+                },
+                {
+                  "text": "presenting-detail-account",
+                  "link": "/accounting/presenting_detail_account",
+                  "i18n": "menu.list.accounting.presenting-detail-account"
+                },
+                {
+                  "text": "document-struct",
+                  "link": "/accounting/document_struct",
+                  "i18n": "menu.list.accounting.document-struct"
+                },
+                {
+                  "text": "issuance-reason",
+                  "link": "/accounting/issuance_reason",
+                  "i18n": "menu.list.accounting.issuance-reason"
+                }
+              ]
+            },
+            {
+              "text": "account-review",
+              "link": "/accounting/account_review",
+              "i18n": "menu.list.accounting.account-review"
+            },
+            {
+              "text": "finance-year-select",
+              "link": "/accounting/finance_year_select",
+              "i18n": "menu.list.accounting.finance-year-select"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
